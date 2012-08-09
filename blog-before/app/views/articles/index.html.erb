@@ -1,0 +1,9 @@
+<h1>Articles 2</h1>
+
+<div id="articles">
+<% @articles.each do |article| %>
+  <h2><%= link_to article.name, article %></h2>
+  <p class="info">Published on <%= article.published_on.strftime("%B %e, %Y") %></p>
+  <%= simple_format article.content %>
+<% end %>
+</div>
